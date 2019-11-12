@@ -1,0 +1,17 @@
+spring:
+  #分环境加载配置
+  profiles:
+    active: test
+  #是否添加资源映射（用于统一异常捕获）
+  resources:
+    add-mappings: false
+  #是否抛出所有未处理异常（用于统一异常捕获）
+  mvc:
+    throw-exception-if-no-handler-found: true
+  #线程池最大线程数量
+  task:
+    pool:
+      maxPoolSize: 100
+#加载系统生成的随机端口
+server:
+  port: ${server.port}
